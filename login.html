@@ -12,6 +12,8 @@
     <title>Log in</title>
     <script>
         $(document).ready(function () {
+            $("#txtUsername").focus();
+
             $("#btnLogin").click(function () {
                 let username=$("#txtUsername").val();
                 let password=$("#txtPassword").val();
@@ -22,9 +24,10 @@
                 }
             });
 
-            $("#btnLogin").click(function () {
-                $("#txtUsername").val();
-                ("#txtPassword").val();
+            $("#btnReset").click(function () {
+                $("#txtUsername").val("");
+                $("#txtPassword").val("");
+                $("#txtUsername").focus();
             });
         });
     </script>
